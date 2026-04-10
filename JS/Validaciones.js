@@ -29,11 +29,17 @@ document.querySelector(".formulario").addEventListener("submit", function(e) {
         return;
     }
 
-    // FECHA
-    let formatoFecha = /^\d{2}-\d{2}-\d{4}$/;
+    // FECHA    
+    if (fecha === "") {
+        alert("Debe seleccionar una fecha");
+        return;
+    }
 
-    if (!formatoFecha.test(fecha)) {
-        alert("La fecha debe tener formato dd-mm-aaaa");
+    let hoy = new Date();
+    let fechaIngresada = new Date(fecha);
+
+    if (fechaIngresada > hoy) {
+        alert("La fecha no puede ser futura");
         return;
     }
 
