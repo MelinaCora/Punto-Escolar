@@ -10,7 +10,7 @@
     margin-bottom: 15px;
 }
 
-/* 🔥 MENU HORIZONTAL */
+/*MENU HORIZONTAL */
 .menu ul {
     list-style: none;
     display: flex;
@@ -30,7 +30,7 @@
     background-color: var(--azul);
 }
 
-/* 🔴 SIDEBAR (oculto para cumplir TP) */
+/*SIDEBAR*/
 .sidebar {
     display: none;
 }
