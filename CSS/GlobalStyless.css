@@ -1,0 +1,95 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --azul-principal: #1E3A8A;   
+    --azul-claro: #3B82F6;       
+    --azul: #2563EB;             
+    --naranja: #F97316;          
+    --gris: #6B7280;
+    --fondo: #F5F7FA;
+    --blanco: #FFFFFF;
+}
+
+/* BODY + LAYOUT GENERAL */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo);
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* TIPOGRAFÍA */
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--azul-principal);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--azul);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: var(--azul-principal);
+    color: white;
+}
+
+/* LOGO */
+.logo img {
+    padding-left: 20%;
+    padding-top: 5%;
+    width: 50px;
+    transform: scale(4.8);
+    filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.63));
+}
+
+/* ICONO HOME */
+.home a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--azul-principal);
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+    flex: 1;
+}
+
+/*RESALTAR LA CATEGORIA SELECCIONADA*/
+.sidebar a.active {
+    background-color: var(--azul-claro);
+    color: white;
+    font-weight: bold;
+}

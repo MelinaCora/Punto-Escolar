@@ -1,0 +1,123 @@
+/* LAYOUT PRINCIPAL */
+.container {
+    display: flex;
+}
+
+.contenido h2 {
+    border-bottom: 2px solid var(--azul);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background-color:var(--blanco);
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+/* TITULO SIDEBAR */
+.sidebar h2 {
+    border-bottom: 2px solid var(--azul);
+    padding-bottom: 5px;
+}
+
+/* LISTA */
+.sidebar ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+/* LINKS */
+.sidebar ul li a {
+    display: block; /* 🔥 clave */
+    padding: 10px;
+    border-radius: 6px;
+    color: var(--gris);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* HOVER MODERNO */
+.sidebar ul li a:hover {
+    background-color: var(--azul);
+    color: white;
+}
+.sidebar {
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+
+/* CONTENIDO */
+.contenido {
+    flex: 1;
+    padding: 25px;
+}
+
+/* TARJETAS (preparado para productos 👀) */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🔥 clave */
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* TEXTO */
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+/* CONTENEDOR DE PRODUCTOS */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* TITULO PRODUCTO */
+.card h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* PRECIO */
+.precio {
+    color: var(--naranja);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* BOTÓN */
+.card button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: var(--azul-claro);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
