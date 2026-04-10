@@ -1,0 +1,109 @@
+/* CONTENEDOR PRINCIPAL */
+.contenido {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* FORMULARIO */
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* TITULO */
+.contenido h2 {
+    width: 100%;
+    border-bottom: 2px solid var(--azul);
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+/* LABELS */
+.formulario label {
+    font-size: 14px;
+    color: var(--gris);
+    font-weight: 500;
+}
+
+/* INPUTS */
+.formulario input,
+.formulario select,
+.formulario textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s;
+}
+
+/* FOCUS */
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--azul);
+}
+
+/* TEXTAREA */
+.formulario textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+/* RADIO GROUP */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* BOTONES */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* BOTONES INDIVIDUALES */
+.botones button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* COLORES BOTONES */
+.botones button[type="submit"] {
+    background-color: var(--azul-claro);
+    color: white;
+}
+
+.botones button[type="reset"] {
+    background-color: var(--gris);
+    color: white;
+}
+
+.botones button[type="button"] {
+    background-color: var(--naranja);
+    color: white;
+}
+
+/* HOVER */
+.botones button:hover {
+    opacity: 0.85;
+}
