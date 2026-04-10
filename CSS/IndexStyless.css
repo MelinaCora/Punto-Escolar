@@ -3,53 +3,36 @@
     display: flex;
 }
 
+/* TITULOS DE CONTENIDO */
 .contenido h2 {
     border-bottom: 2px solid var(--azul);
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-/* SIDEBAR */
-.sidebar {
-    width: 220px;
-    background-color:var(--blanco);
-    padding: 20px;
-    border-right: 1px solid #ddd;
-}
-
-/* TITULO SIDEBAR */
-.sidebar h2 {
-    border-bottom: 2px solid var(--azul);
-    padding-bottom: 5px;
-}
-
-/* LISTA */
-.sidebar ul {
+/* 🔥 MENU HORIZONTAL */
+.menu ul {
     list-style: none;
-    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-.sidebar ul li {
-    margin-bottom: 12px;
-}
-
-/* LINKS */
-.sidebar ul li a {
-    display: block; /* 🔥 clave */
-    padding: 10px;
-    border-radius: 6px;
-    color: var(--gris);
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-/* HOVER MODERNO */
-.sidebar ul li a:hover {
-    background-color: var(--azul);
+.menu ul li a {
     color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
 }
+
+.menu ul li a:hover {
+    background-color: var(--azul);
+}
+
+/* 🔴 SIDEBAR (oculto para cumplir TP) */
 .sidebar {
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    display: none;
 }
 
 /* CONTENIDO */
@@ -58,16 +41,24 @@
     padding: 25px;
 }
 
-/* TARJETAS (preparado para productos 👀) */
+/* CONTENEDOR DE PRODUCTOS */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* TARJETAS */
 .card {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
     width: 180px;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 🔥 clave */
+    justify-content: space-between;
 
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
@@ -84,22 +75,16 @@
     border-radius: 10px;
 }
 
-/* TEXTO */
-.card p {
-    margin-top: 8px;
-    font-size: 14px;
-}
-/* CONTENEDOR DE PRODUCTOS */
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
 /* TITULO PRODUCTO */
 .card h3 {
     font-size: 16px;
     margin-top: 10px;
+}
+
+/* TEXTO */
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
 }
 
 /* PRECIO */
@@ -120,4 +105,8 @@
     border: none;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: var(--azul);
 }
