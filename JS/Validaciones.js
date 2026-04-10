@@ -51,7 +51,32 @@ document.querySelector(".formulario").addEventListener("submit", function(e) {
         return;
     }
 
-    //TODO OK
+    let confirmar = confirm("¿Desea enviar el formulario?");
+
+    if (!confirmar) {
+        return;
+    }
+
     alert("Formulario enviado correctamente 🎉");
+
+});
+
+document.querySelector("button[type='button']").addEventListener("click", function() {
+
+    let confirmar = confirm("¿Desea cancelar y borrar los datos?");
+
+    if (confirmar) {
+        document.querySelector(".formulario").reset();
+    }
+
+});
+
+document.querySelector("button[type='reset']").addEventListener("click", function(e) {
+
+    let confirmar = confirm("¿Seguro que desea restablecer el formulario?");
+
+    if (!confirmar) {
+        e.preventDefault(); // cancela el reset
+    }
 
 });
