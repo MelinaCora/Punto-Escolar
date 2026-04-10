@@ -1,12 +1,5 @@
-//Detectar el formulario
 document.querySelector(".formulario").addEventListener("submit", function(e) {
-    e.preventDefault(); 
 
-    alert("Validando formulario...");
-});
-
-//validar campos vacios
-document.querySelector(".formulario").addEventListener("submit", function(e) {
     e.preventDefault();
 
     let nombre = document.querySelector("[name='nombre']").value.trim();
@@ -17,39 +10,42 @@ document.querySelector(".formulario").addEventListener("submit", function(e) {
 
     let valoracion = document.querySelector("input[name='valoracion']:checked");
 
+    // VALIDAR VACÍOS
     if (nombre === "" || apellido === "" || fecha === "" || sexo === "" || email === "" || !valoracion) {
         alert("Todos los campos son obligatorios");
         return;
     }
 
-    alert("Campos completos ✔");
+    // SOLO LETRAS
+    let soloLetras = /^[a-zA-Z]+$/;
+
+    if (!soloLetras.test(nombre)) {
+        alert("El nombre solo puede contener letras");
+        return;
+    }
+
+    if (!soloLetras.test(apellido)) {
+        alert("El apellido solo puede contener letras");
+        return;
+    }
+
+    // FECHA
+    let formatoFecha = /^\d{2}-\d{2}-\d{4}$/;
+
+    if (!formatoFecha.test(fecha)) {
+        alert("La fecha debe tener formato dd-mm-aaaa");
+        return;
+    }
+
+    //EMAIL
+    let formatoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!formatoEmail.test(email)) {
+        alert("Email inválido");
+        return;
+    }
+
+    //TODO OK
+    alert("Formulario enviado correctamente 🎉");
+
 });
-
-//validar nombre y apellido
-let soloLetras = /^[a-zA-Z]+$/;
-
-if (!soloLetras.test(nombre)) {
-    alert("El nombre solo puede contener letras");
-    return;
-}
-
-if (!soloLetras.test(apellido)) {
-    alert("El apellido solo puede contener letras");
-    return;
-}
-
-//validar fecha
-let formatoFecha = /^\d{2}-\d{2}-\d{4}$/;
-
-if (!formatoFecha.test(fecha)) {
-    alert("La fecha debe tener formato dd-mm-aaaa");
-    return;
-}
-
-//validar Correo
-let formatoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-if (!formatoEmail.test(email)) {
-    alert("Email inválido");
-    return;
-}
